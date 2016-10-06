@@ -65,8 +65,8 @@ The goal is to prepare an easy set up of an development environment that can be 
 
 This work is inspired by Matthew A. Russel's work on [Mining the social Web](https://miningthesocialweb.com), where I found out about iPython (now jupyter) and how to use Vagrant and chef to prepare an easy to deploy development environment.
 
-[[images/ZX81.jpg]]
+![The ZX81](images/ZX81.jpg)
 
 ## Status
-* The vagrantfile is done, so setting up the development environment should be working.
-* There is the first "hello world" lessons, to proof the concept. More tutorials to come.
+* The vagrantfile is done, so setting up the development environment is working. Some tweeks to the chef recipes have been necessary to point the jupyter working directory to the right directory that is linked from the guest machine directly to the host machine.
+* The first lesson on statements and expressions is finished.
