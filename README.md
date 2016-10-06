@@ -2,7 +2,7 @@ Learn How to Code
 =================
 
 ## Project mission
-This project teaches the very basics of programming:
+This project teaches the very basics of programming (in Python):
 + variables
 + conditions (if then else)
 + arrays
@@ -11,6 +11,9 @@ This project teaches the very basics of programming:
 
 This is done by providing an easy to install programming environment. If you know how to use a web browser, then you are ready to follow the tutorial and do your own experiments.
 
+## Integrated tutorial and platform to edit and run your programs
+
+![Get an idea of how to learn-how-to-code with this project](images/01_The_Basics_annotated.png)
 
 ## How to get started
 ### Installation
