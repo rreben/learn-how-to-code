@@ -43,6 +43,19 @@ After the installation. Use [http://localhost:8888](http://localhost:8888) in yo
 * These notebooks can be accessed via port forwading from the host computer.
 * This way all the tutorials are brought to the users browser.
 
+## Handling errors
+### Problems with mounting the directories / Guest additions do not match
+You might see a warning while vagrant up, telling you that guest additions do not match the version of the virtual box.
+
+![important warning](images/warningGuestAdditions.png)
+
+The effect might be that the directories with the jupyter notebooks are not mounted correctly. In this case you will see that jupyter is running (localhost:8888 will show a webpage), however you will not see any meaningful tutorials.
+
+If this happens, you have to update your virtualbox installation to the newest version. Use `vagrant destroy` to restart from scratch, use `vagrant up` to install again (do this in a strong wifi network). This should fix everything.
+
+### Other bugs and errors
+Your stuck with the installation. Please create an issue on Github, I will try to help you then.
+
 ## Get in touch
 * Use Github to open tickets for support questions.
 * Follow me on Twitter `@r_rbn`
@@ -66,9 +79,22 @@ This project is not aiming at a nostalgic ZX81-emulation. On the contrary I will
 
 The goal is to prepare an easy set up of an development environment that can be used via the browser. And to provide a set of simple jupyter playbooks. Aimed at the beginner to teach them the basics.
 
+![The ZX81](images/ZX81.jpg)
+
+## Acknowledgement
 This work is inspired by Matthew A. Russel's work on [Mining the social Web](https://miningthesocialweb.com), where I found out about iPython (now jupyter) and how to use Vagrant and chef to prepare an easy to deploy development environment.
 
-![The ZX81](images/ZX81.jpg)
+I followed the ZX81 manual. And adopted it for learning python. So I owe a lot to Steven Vickers and his famous book: "Sinclair ZX81 BASIC Programming by Steven Vickers Second Edition 1981."
+
+I used the following chef recipes to cook up the development environment:
+* [anaconda](https://github.com/thmttch/chef-continuum-anaconda)
+* [apt](https://github.com/chef-cookbooks/apt)
+* bzip2 chef cookbook from John Bellone
+* compat chef cookbook from John Keiser
+* [packagecloud](https://github.com/computology/packagecloud-cookbook')
+* runit chef cookbook from the Heavy Water Operations, LLC.
+* tar chef cookbook from the Cramer Development, Inc.
+
 
 ## Status
 * The vagrantfile is done, so setting up the development environment is working. Some tweeks to the chef recipes have been necessary to point the jupyter working directory to the right directory that is linked from the guest machine directly to the host machine.
