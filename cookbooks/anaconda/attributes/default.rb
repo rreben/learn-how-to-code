@@ -66,6 +66,7 @@ default.anaconda.notebook = {
   'port' => 8888,
   'owner' => node.anaconda.owner,
   'group' => node.anaconda.group,
+  #RR changed
   'notebook_dir' => '/vagrant/notebooks',
   'install_dir' => '/opt/ipython/server',
 }

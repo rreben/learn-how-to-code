@@ -26,6 +26,8 @@ action :create do
   owner = r.owner || node.anaconda.notebook.owner
   group = r.group || node.anaconda.notebook.group
   install_dir = r.install_dir || node.anaconda.notebook.install_dir
+  #RR changed
+  notebook_dir = r.notebook_dir || node.anaconda.notebook.notebook_dir
 
 
   directory install_dir do
@@ -51,8 +53,8 @@ action :create do
   run_template_opts = r.run_template_opts || {
     :owner => owner,
     :cmd_ipython => cmd_ipython(),
-    #RR
-    :notebook_dir => '/vagrant/notebooks',
+    #RR changed
+    :notebook_dir => notebook_dir,
     :ipython_dir => ipython_dir,
     :ip => ip,
     :port => port,

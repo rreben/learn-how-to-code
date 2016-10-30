@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#RR changed
 pushd <%= @options[:notebook_dir] %>
 
 <% if @options[:pythonpath] %>
@@ -22,4 +23,5 @@ exec \
       --ipython-dir=<%= @options[:ipython_dir] %> \
       --ip=<%= @options[:ip] %> \
       --port=<%= @options[:port] %> \
+      --notebook-dir=<%= @options[:notebook_dir] %>
       --no-browser

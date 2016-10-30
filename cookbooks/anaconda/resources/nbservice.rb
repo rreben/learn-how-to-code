@@ -12,6 +12,8 @@ attribute :owner, :kind_of => String
 attribute :group, :kind_of => String
 
 attribute :install_dir, :kind_of => String
+# RR changed
+attribute :notebook_dir, :kind_of => String
 
 # if you really need it
 attribute :pythonpath, :kind_of => Array

@@ -17,6 +17,8 @@ anaconda_nbservice 'notebook-server' do
   group node.anaconda.notebook.group
 
   install_dir node.anaconda.notebook.install_dir
+  # RR changed
+  notebook_dir node.anaconda.notebook.notebook_dir
 
   service_action [ :enable, :start ]
 end
