@@ -43,25 +43,6 @@ After the installation. Use [http://localhost:8888](http://localhost:8888) in yo
 * These notebooks can be accessed via port forwading from the host computer.
 * This way all the tutorials are brought to the users browser.
 
-## Handling errors
-### Problems with mounting the directories / Guest additions do not match
-You might see a warning while vagrant up, telling you that guest additions do not match the version of the virtual box.
-
-![important warning](images/warningGuestAdditions.png)
-
-The effect might be that the directories with the jupyter notebooks are not mounted correctly. In this case you will see that jupyter is running (localhost:8888 will show a webpage), however you will not see any meaningful tutorials.
-
-If this happens, you have to update your virtualbox installation to the newest version. Use `vagrant destroy` to restart from scratch, use `vagrant up` to install again (do this in a strong wifi network). This should fix everything.
-
-### Other bugs and errors
-Your stuck with the installation. Please create an issue on Github, I will try to help you then.
-
-## Get in touch
-* Use Github to open tickets for support questions.
-* Follow me on Twitter `@r_rbn`
-* Tweet using `#lhtc` (learn how to code). Or send me a DM.
-* Forking, starring, following the github repo would be great.
-
 ## Inspired by the ZX81
 35 years ago I started programming on a ZX81. Since then I never stopped. Now my son is the same age as I was then. He starts to program  on his iPod (although he owns a desktop PC). Why is this? It should be so much easier to program with an IDE using a modern programming language ...
 
@@ -99,3 +80,28 @@ I used the following chef recipes to cook up the development environment:
 ## Status
 * The vagrantfile is done, so setting up the development environment is working. Some tweeks to the chef recipes have been necessary to point the jupyter working directory to the right directory that is linked from the guest machine directly to the host machine.
 * The first lesson on statements and expressions is finished.
+
+
+## Handling errors
+### Problems with mounting the directories / Guest additions do not match
+You might see a warning while vagrant up, telling you that guest additions do not match the version of the virtual box.
+
+![important warning](images/warningGuestAdditions.png)
+
+The effect might be that the directories with the jupyter notebooks are not mounted correctly. In this case you will see that jupyter is running (localhost:8888 will show a webpage), however you will not see any meaningful tutorials.
+
+If this happens, you have to update your virtualbox installation to the newest version. Use `vagrant destroy` to restart from scratch, use `vagrant up` to install again (do this in a strong wifi network). This should fix everything.
+
+#### Tips for analysing errors
+In most cases, this should solve your problems. But if the message "The guest additions on this VM do not match the installed version of VirtualBox! ..." persists, you might try to issue. `vagrant plugin install vagrant-vbguest` and restart vagrant. This might indicate further problems with the guest additions.
+
+Use `vagrant ssh` to login to your guest mashine. Here you might issue `ipython notebook --help` to learn more about starting the jupyter service.
+
+### Other bugs and errors
+Your stuck with the installation. Please create an issue on Github, I will try to help you then.
+
+## Get in touch
+* Use Github to open tickets for support questions.
+* Follow me on Twitter `@r_rbn`
+* Tweet using `#lhtc` (learn how to code). Or send me a DM.
+* Forking, starring, following the github repo would be great.
