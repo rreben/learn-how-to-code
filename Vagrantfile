@@ -23,8 +23,8 @@ Vagrant.configure("2") do |config|
 
     # The Virtualbox image
     #override.vm.box = "precise64"
-#    override.vm.box = "ubuntu/trusty64"
-    override.vm.box = "bento/ubuntu-16.04"
+    override.vm.box = "ubuntu/trusty64"
+#    override.vm.box = "bento/ubuntu-16.04"
 
     # You might have to play around with the following two lines if you have to install
     # the virtual mashine on a flash or usb-flash drive.
