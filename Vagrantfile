@@ -46,6 +46,7 @@ Vagrant.configure("2") do |config|
 
   # Chef-Solo provisioning
   config.vm.provision :chef_solo do |chef|
+    chef.version = '12.19.36'
     chef.json = {
       :anaconda => {
         :accept_license => 'yes',
